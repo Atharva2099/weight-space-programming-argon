@@ -264,20 +264,23 @@ The agent operates in a strictly blind environment: zero web access, zero access
 
 ---
 
-## 3-Way Head-to-Head Benchmark Results (100 Official Competition Problems)
+## 4-Way Head-to-Head Benchmark Results (100 Official Competition Problems)
 
-Evaluated across **100 official benchmark problems** (50 from `HuggingFaceH4/MATH-500` and 50 from `openai/gsm8k`):
+Evaluated across **100 official benchmark problems** (50 from `HuggingFaceH4/MATH-500` and 50 from `openai/gsm8k`) under standard generation limits (`max_new_tokens=1024`, `temp=0.6`, `top_p=0.95`, `top_k=20`):
 
-| Model Condition | Total Exit Rate (100 Problems) | MATH-500 Exit Rate (50 Problems) | GSM8K Exit Rate (50 Problems) |
-|---|---|---|---|
-| **Base Model (`Qwen3.5-0.8B`)** | **1.0%** (1 / 100) | **0.0%** (0 / 50) | **2.0%** (1 / 50) |
-| **GPT-6 Astra Edit (MIT CSAIL)** | **5.0%** (5 / 100) | **0.0%** (0 / 50) | **10.0%** (5 / 50) |
-| **Gemini 4 Argon Edit (Our Work)** | **82.0%** (82 / 100) | **78.0%** (39 / 50) | **86.0%** (43 / 50) |
+| Model Condition | Scope / Mechanism | Total Exit Rate (100 Problems) | MATH-500 Exit Rate (50 Problems) | GSM8K Exit Rate (50 Problems) |
+|---|---|---|---|---|
+| **Base Model (`Qwen3.5-0.8B`)** | Unmodified Base | **1.0%** (1 / 100) | **0.0%** (0 / 50) | **2.0%** (1 / 50) |
+| **GPT-6 Astra (MIT CSAIL)** | Internal Only: Layers 15 & 19 MLPs (0.016%) | **5.0%** (5 / 100) | **0.0%** (0 / 50) | **10.0%** (5 / 50) |
+| **Gemini 4 Argon Phase 2 (Constrained)** | Internal Only: Layers 16–23 MLPs + L23 Attn (4.18%) | **3.0%** (3 / 100) | **0.0%** (0 / 50) | **6.0%** (3 / 50) |
+| **Gemini 4 Argon Phase 1 (Unconstrained)** | Output Gated: Layers 18–23 MLPs + `lm_head` (0.054%) | **82.0%** (82 / 100) | **78.0%** (39 / 50) | **86.0%** (43 / 50) |
 
-### Key Findings
-1. **Base Model**: Completely suffocated by degenerative thinking loops (0% exit on MATH-500, 2% on GSM8K).
-2. **GPT-6 Astra Edit**: Under a standard 1,024-token budget, Astra's Layer 15/19 column subtraction still produced overly sprawling traces that hit the token ceiling on 95% of problems (Astra was evaluated with up to 32,768 tokens in the MIT CSAIL paper).
-3. **Gemini 4 Argon Edit**: The State-Conditional Bridge achieved **82.0% clean thinking exits** within standard token limits (78% on MATH-500 and 86% on GSM8K), proving vastly superior token efficiency.
+### Key Scientific Findings
+1. **Internal-Only Surgery Cannot Force Compact Exits (Astra vs. Phase 2)**:
+   When strictly restricted to internal layers without touching `lm_head`, both Astra (5.0%) and Argon Phase 2 (3.0%) behave almost identically: they score **0.0% on MATH-500** because internal edits dampen loop amplification but do not compress mathematical scratchpads. The model must wander through multi-thousand-token derivations (which is why MIT CSAIL evaluated Astra with up to **32,768 tokens**).
+2. **The Output-Gated Breakthrough (Phase 1)**:
+   By identifying the `</think>` embedding norm deficit and constructing the **State-Conditional Bridge** (`W_U[think_end] = 1.22 * w_think + (0.35 * norm) * u_hesitate`), Argon Phase 1 forces the scratchpad to close the instant an answer is reached, achieving an **82.0% exit rate under standard 1k-token limits**.
+
 
 
 
