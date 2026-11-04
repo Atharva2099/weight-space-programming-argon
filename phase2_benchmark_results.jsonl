@@ -1,0 +1,100 @@
+{"id": "math500_00", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\left( 3, \\frac{\\pi}{2} \\right)", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_01", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "p - q", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_02", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\frac{14}{3}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_03", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "9", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_04", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\text{Evelyn}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_05", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "42", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_06", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "27", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_07", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "90^\\circ", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_08", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "3\\sqrt{13}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_09", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "4", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_10", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "2220", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_11", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\frac{3}{56}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_12", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "284", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_13", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "5", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_14", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\sqrt{51}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_15", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "6 - 5i", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_16", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "-50", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_17", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\pi", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_18", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "28", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_19", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "3", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_20", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "6+9i", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_21", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "13535", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_22", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "5", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_23", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "x=5", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_24", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "10", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_25", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "1,-2", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_26", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "144", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_27", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "78", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_28", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "-2 + 7i", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_29", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "225", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_30", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "52_8", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_31", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "11\\sqrt2", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_32", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "720", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_33", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\frac{243}{625}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_34", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "-125", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_35", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "3", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_36", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "3, 5, 7", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_37", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "72", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_38", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "2000", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_39", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "23", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_40", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "12", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_41", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "17", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_42", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "4", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_43", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "70 \\sqrt{2}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_44", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "1.25", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_45", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "2", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_46", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "6", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_47", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "5", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_48", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "\\frac{3}{2}", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "math500_49", "dataset": "MATH-500", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "83", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_00", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "18", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_01", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "3", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_02", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "70000", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_03", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": true, "pred": "180", "gt": "540", "gen_tokens": 744, "resp_sample": "Here is the step-by-step reasoning to solve the problem:\n\n1.  **Identify the number of sprints:** James runs 3 times a week.\n2.  **Identify the distance per sprint:** He runs 60 me"}
+{"id": "gsm8k_04", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "20", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_05", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "64", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_06", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": true, "pred": "20", "gt": "260", "gen_tokens": 1024, "resp_sample": "Here is the step-by-step reasoning to solve the problem:\n\n**1. Identify the given information:**\n*   Seattle ($S$) = 20 sheep"}
+{"id": "gsm8k_07", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "160", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_08", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "45", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_09", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "460", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_10", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "366", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_11", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "694", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_12", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "13", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_13", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "18", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_14", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "60", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_15", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "125", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_16", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "230", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_17", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "57500", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_18", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "7", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_19", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "6", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_20", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "15", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_21", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "14", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_22", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "7", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_23", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "8", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_24", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "26", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_25", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "2", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_26", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "243", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_27", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "16", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_28", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "25", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_29", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "104", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_30", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "109", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_31", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "80", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_32", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "35", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_33", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "70", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_34", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "23", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_35", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "9", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_36", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "75", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_37", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "2", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_38", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "10", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_39", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "18", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_40", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "8", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_41", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "200", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_42", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "26", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_43", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "48", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_44", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": true, "pred": "10", "gt": "20", "gen_tokens": 1024, "resp_sample": "Here is the step-by-step reasoning to find Charlie's net profit.\n\n**1. Determine the Total Revenue**\nFirst, calculate how much money Charlie earns from selling the candles.\n*   Qua"}
+{"id": "gsm8k_45", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "104", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_46", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "163", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_47", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "800", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_48", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "8", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
+{"id": "gsm8k_49", "dataset": "GSM8K", "condition": "PHASE2_CONSTRAINED", "exited": false, "pred": "", "gt": "30", "gen_tokens": 1024, "resp_sample": "[TRUNCATED - NEVER EXITED THINKING]"}
