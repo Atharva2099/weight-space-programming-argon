@@ -1,0 +1,970 @@
+{
+  "base": [
+    {
+      "id": "math500_headroom_00",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " is it possible the prompt meant $(0,3)$? Yes.\n        *   Wait, is it possible the prompt meant $(0,3)$? Yes.\n        *   Wait, is it possible the prompt meant $(0,3)$? Yes.\n\n    *   *Wait, let me check if the prompt meant $(0,3)$.*\n        *   Yes, $(x,y) = (0,3)$.\n        *   Wait, is it possible"
+    },
+    {
+      "id": "math500_headroom_01",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " Wait, $n=6$ means $j+k=6$.\n    $j=1, k=5$.\n    $j=2, k=4$.\n    $j=3, k=3$.\n    $j=4, k=2$.\n    $j=5, k=1$.\n    Wait, $j=6, k=0$ is not allowed.\n    So count is 5.\n    So the sum is $\\sum_{n=2}^\\infty \\frac{1}{n^3} (n-1)$?\n    Wait, for $n=6$, count is 5.\n    Wait, $n=6$, $j=1, k=5$, $j=2, k=4$, $j="
+    },
+    {
+      "id": "math500_headroom_02",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "\n    *   $3x-2 = 3(x-2) + 3(2) - 2$? No.\n    *   $3x-2 = 3(x-2) + 4$? No.\n    *   $3x-2 = 3(x-2) + 3(2) - 2$? No.\n    *   $3x-2 = 3(x-2) + 3(2) - 2$? No.\n    *   $3x-2 = 3(x-2) + 4$? No.\n    *   $3x-2 = 3(x-2) + 3(2) - 2$? No.\n    *   $3x-2 = 3(x-2) + 3(2) - 2$? No.\n    *   $3x-2 = 3(x-2) + 4$? No.\n"
+    },
+    {
+      "id": "math500_headroom_03",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $196 = 2 \\times 98$.\n        *   Wait, $19"
+    },
+    {
+      "id": "math500_headroom_04",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "   *   Debra: $(5.6, 2.8)$\n                *   Angela: $(6.8, 1.4)$\n            *   Wait, the coordinates in the code for the dots are:\n                *   $(1.25, 4.5)$\n                *   $(2.5, 2.2)$\n                *   $(4.25, 5.2)$\n                *   $(5.6, 2.8)$\n                *   $(6.8, 1.4"
+    },
+    {
+      "id": "math500_headroom_05",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "e diagram.\n                *   Let's draw a regular hexagon.\n                *   Connect the midpoints of the sides.\n                *   This forms a smaller hexagon.\n                *   Wait, is the hexagon formed by connecting the midpoints of the sides an equilateral triangle?\n                *  "
+    },
+    {
+      "id": "math500_headroom_06",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " must be divisible by 3.\n    *   Let $k = 3m$.\n    *   $3(3m)^3 / 3$? No.\n    *   $a+1 = (3m)^3 / 3 = 27m^3 / 3 = 9m^3$.\n    *   $a = 9m^3 - 1$.\n    *   Wait, is $a+1$ a multiple of 3?\n    *   $a+1 = 9m^3$.\n    *   $9m^3$ is divisible by 3.\n    *   $a+1 = 3(3m^3)$.\n    *   So $a = 3(3m^3) - 1 = 9m^3"
+    },
+    {
+      "id": "math500_headroom_07",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "is correct.\n    *   Wait, I wrote $z = -3y$ above.\n    *   Let's check $z = -2x$.\n    *   $x = 3t$. $z = -6t$.\n    *   $y = 2t$.\n    *   So $\\mathbf{v}_1 = \\langle 3, 2, -6 \\rangle$ is correct.\n    *   Wait, I wrote $z = -3y$ above.\n    *   Let's check $z = -2x$.\n    *   $x = 3t$. $z = -6t$.\n    *  "
+    },
+    {
+      "id": "math500_headroom_08",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "    $x_2 = -4, y_2 = 3$\n    $\\Delta x = -4 - 2 = -6$.\n    $\\Delta y = 3 - (-6) = 9$.\n    $(-6)^2 = 36$.\n    $9^2 = 81$.\n    $36 + 81 = 117$.\n    $\\sqrt{117} = 3\\sqrt{13}$.\n    My previous mental check \"Wait, I wrote $3 - (-6) = 9$ above. Is it correct?\"\n    $3 - (-6) = 3 + 6 = 9$.\n    Yes.\n    Is it"
+    },
+    {
+      "id": "math500_headroom_09",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " calculation.\n        *   Let's check the example again.\n        *   $(2\\cdot (3\\cdot 4)) \\cdot (5+1) = 144$.\n        *   Wait, $2 \\cdot 3 \\cdot 4 = 24$. $24 \\cdot 6 = 144$.\n        *   So the example is valid for the expression $2 \\cdot 3 \\cdot 4 \\cdot 5 + 1$?\n        *   Wait, $2 \\cdot 3 \\cdot 4 \\"
+    },
+    {
+      "id": "math500_headroom_10",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "N$ must be formed by digits 0 and 2.\n    *   $N$ must be even.\n    *   $N$ must be divisible by 3.\n\n    *   Wait, is \"multiple of 30\" equivalent to \"divisible by 3\"? Yes.\n    *   Wait, is \"multiple of 30\" equivalent to \"divisible by 10\"? Yes.\n    *   Wait, is \"multiple of 30\" equivalent to \"multiple"
+    },
+    {
+      "id": "math500_headroom_11",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "\nWait, maybe the question is asking for $p(8)$ where $p(x)$ is a polynomial of degree 5?\nWait, if $p(n)$ is a polynomial in $n$, then $p(n)$ is a polynomial.\nBut $\\frac{n}{n^2-1}$ is not a polynomial in $n$.\nWait, maybe the question is asking for $p(8)$ where $p(x)$ is a polynomial of degree 5?\nWait"
+    },
+    {
+      "id": "math500_headroom_12",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "need to check the factorization of 284 again.\n    *   $284 = 2^2 \\times 71$.\n    *   Divisors: $1, 2, 4, 71, 142, 284$.\n    *   Proper divisors: $1, 2, 4, 71, 142$.\n    *   Sum: $1+2+4+71+142 = 220$.\n\n    *   Wait, I need to check the sum of proper divisors of 284 again.\n    *   Wait, is 71 a proper"
+    },
+    {
+      "id": "math500_headroom_13",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "$\" is drawn.\n                        *   Wait, looking at the coordinates, the label \"$h$\" is drawn.\n                        *   Wait, looking at the coordinates, the circle is centered at (0,0) with radius 1.2.\n                        *   Wait, looking at the coordinates, the line is drawn from (1,"
+    },
+    {
+      "id": "math500_headroom_14",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "  *   This sets $D$ to $(\\sqrt{51}, 7)$.\n    *   This means $D$ is at $y=7$.\n    *   $E$ is at $(0,7)$.\n    *   This means $E$ is on the line $y=7$.\n    *   $F$ is at $(0,0)$.\n    *   This means $F$ is on the line $y=0$.\n    *   So $D$ and $E$ are on the same horizontal line $y=7$.\n    *   $F$ is at"
+    },
+    {
+      "id": "math500_headroom_15",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "Wait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = 3\\sqrt{2}$.\nWait, $3 + 3\\sqrt{2} - 3 = "
+    },
+    {
+      "id": "math500_headroom_16",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "ve.\n    *   $5$ is positive.\n    *   ...\n    *   $99$ is positive.\n    *   $-100$ is negative.\n    *   So the series is $1-2+3-4+5-6+7-8+9-10+\\dots+99-100$.\n    *   Wait, the last term is $-100$.\n    *   Let's check the pattern of signs again.\n    *   $1$ is positive.\n    *   $-2$ is negative.\n    *"
+    },
+    {
+      "id": "math500_headroom_17",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "-coordinates.\nWait, the labels are placed at $y$-coordinates.\nWait, the labels are placed at $y$-coordinates.\nWait, the labels are placed at $y$-coordinates.\nWait, the labels are placed at $y$-coordinates.\nWait, the labels are placed at $y$-coordinates.\nWait, the labels are placed at $y$-coordinates"
+    },
+    {
+      "id": "math500_headroom_18",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "$(4.5, 3)$.\n                *   Wait, looking at the diagram, $x$ is at $(4.5, 3)$.\n                *   Wait, looking at the diagram, $x$ is at $(4.5, 3)$.\n                *   Wait, looking at the diagram, $x$ is at $(4.5, 3)$.\n                *   Wait, looking at the diagram, $x$ is at $(4.5, 3)$.\n"
+    },
+    {
+      "id": "math500_headroom_19",
+      "type": "math_headroom",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " x_3 + x_3 x_1 = -1 + x_2 + x_3 - x_3 = -1 + x_2$.\nWait, $x_1 x_2 + x_2 x_3 + x_3 x_1 = -x_2 + x_3 - x_3 = -x_2$.\nSo $a = -x_2$.\nWait, $x_1 x_2 + x_2 x_3 + x_3 x_1 = -x_2 + x_3 - x_3 = -x_2$.\nWait, $x_3 x_1 = x_3 (-1) = -x_3$.\nSo $a = -x_2 + x_3 - x_3 = -x_2$.\nSo $a = -x_2$.\nWait, $x_2 = -a$.\nSo $x_"
+    },
+    {
+      "id": "code_01",
+      "type": "code",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 378,
+      "has_exit": true,
+      "snippet": "]\n\n    for s in test_strings:\n        result = is_palindrome(s)\n        print(f\"'{s}' -> {result}\")\n```\n\nThis function:\n- Ignores all punctuation, whitespace, and case.\n- Returns `True` for palindromes, `False` otherwise.\n- Includes a docstring and example usage as requested.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_02",
+      "type": "code",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": " \n    # Use a list to store previous values for efficiency\n    prev = [0]\n    curr = [1]\n    \n    # Calculate first n Fibonacci numbers\n    for i in range(2, n + 1):\n        prev.append(curr[-1])\n        curr.append(prev[-1] + curr[-1])\n    \n    # Return the first n Fibonacci numbers\n    return prev"
+    },
+    {
+      "id": "code_03",
+      "type": "code",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "       start = intervals[i][0]\n        end = intervals[i][1]\n        \n        # Check if this interval overlaps with the previous merged interval\n        for j in range(i):\n            prev_start = intervals[j][0]\n            prev_end = intervals[j][1]\n            \n            if start <= prev_end:\n"
+    },
+    {
+      "id": "code_04",
+      "type": "code",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": " key: str, value: str) -> None:\n        if key in self.cache:\n            self.cache[key] = value\n        else:\n            if len(self.cache) > self.capacity:\n                return\n            self.cache[key] = value\n    \n    def __len__(self) -> int:\n        return len(self.cache)\n    \n    def __"
+    },
+    {
+      "id": "code_05",
+      "type": "code",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 274,
+      "has_exit": true,
+      "snippet": "ft + 1)\n\n    return max_len\n```\n\nYou can call it like this:\n\n```python\ns = \"abcabcbb\"\nprint(longest_substring_without_repeating(s))  # Output: 3 (\"abc\")\n```\n\nThis solution runs in O(n) time and uses O(k) extra space, where k is the number of distinct characters in the string.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_01",
+      "type": "instruction",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 114,
+      "has_exit": true,
+      "snippet": "rformance and avoid catastrophic failure.\n* In supervised learning, the model is fed new data to improve its performance on unseen instances, whereas reinforcement learning requires the agent to take actions to influence the environment and learn optimal strategies over time.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_02",
+      "type": "instruction",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 234,
+      "has_exit": true,
+      "snippet": "ents and will do my best to ensure I can attend your event on a time that works for everyone.\n\nThank you again for your consideration and for your kind words. I look forward to hearing from you soon.\n\nBest regards,\n\n[Your Name]\n[Your Title/Position]\n[Your Contact Information]<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_03",
+      "type": "instruction",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 70,
+      "has_exit": true,
+      "snippet": "<think>\n\n</think>\n\n```json\n{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year_published\": \"1925\",\n  \"genres\": [\"Fiction\", \"Literary Fiction\"],\n  \"in_print\": true\n}\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_04",
+      "type": "instruction",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 245,
+      "has_exit": true,
+      "snippet": "wo distinct types of tides: the high tide, when the ocean's arm catches the sun and pushes the water up high, and the low tide, when the ocean's arm lets go and the water level drops down. This gentle, rhythmic motion is the natural way the ocean keeps its rhythm and balance.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_05",
+      "type": "instruction",
+      "condition": "BASE_MODEL",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": ", Earth, Soil, Greenhouse, Coffee, Bean, Fresh, Green, Earth, Roast, Roasted, Greenhouse, Leaf, Harvest, Bean, Fresh, Green, Earth, Soil, Greenhouse, Coffee, Bean, Fresh, Green, Earth, Roast, Roasted, Greenhouse, Leaf, Harvest, Bean, Fresh, Green, Earth, Soil, Greenhouse, Coffee, Bean, Fresh, Green,"
+    }
+  ],
+  "astra": [
+    {
+      "id": "math500_headroom_00",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "$(3, 90^\\circ)$?\n    But the range $0 \\le \\theta < 2\\pi$ is specific to radians.\n    So I will stick to radians.\n\n    Wait, is there any ambiguity with the point $(0, 3)$?\n    Could it be $(0, 0)$? No, 3 is there.\n    Could it be $(3, 0)$? No.\n    Could it be $(-3, 0)$? No.\n    Could it be $(0, -3)$"
+    },
+    {
+      "id": "math500_headroom_01",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "um_{k=1}^\\infty \\frac{1}{(j+k)^3}$.\nLet's try to rewrite the term $\\frac{1}{(j+k)^3}$.\nNotice that $\\frac{1}{(j+k)^3} = \\frac{1}{n^3}$ where $n = j+k$.\nLet's swap the order of summation.\nWe can write $S = \\sum_{n=2}^\\infty \\frac{1}{n^3} \\times (\\text{number of pairs } (j,k) \\text{ such that } j+k=n)"
+    },
+    {
+      "id": "math500_headroom_02",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "ac{4}{-2} = 3 - 2 = 1$. Correct.\n        Let's check $x=-2$.\n        $3 + \\frac{4}{-4} = 3 - 1 = 2$. Correct.\n\n        Let me check the sum again.\n        $2 + 1 + 5/3 = 3 + 5/3 = 14/3$.\n\n        Wait, I see a potential confusion.\n        In the first block, I wrote \"Sum: $2 + 1 + 5/3 = 2 + 1 + 5/3$"
+    },
+    {
+      "id": "math500_headroom_03",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "\n    *   Wait, I need to check if I missed any.\n    *   Wait, $196 / 28 = 7$.\n    *   So $28$ is a divisor.\n    *   So far: $1, 2, 4, 7, 14, 28, 49, 98, 196$.\n    *   Wait, I need to check if $196$ is a divisor.\n    *   $196 / 196 = 1$.\n    *   So $196$ is a divisor.\n    *   So the list is correct.\n"
+    },
+    {
+      "id": "math500_headroom_04",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "pecific coordinates.\n        *   $O$ at $(0,0)$.\n        *   $E$velyn at $(1.25, 4.8)$.\n        *   $B$riana at $(2.5, 2.2)$.\n        *   $C$arla at $(4.25, 5.2)$.\n        *   $D$ebra at $(5.6, 2.8)$.\n        *   $A$ngela at $(6.8, 1.4)$.\n    *   Wait, the labels are placed at specific coordinates:\n"
+    },
+    {
+      "id": "math500_headroom_05",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "               *   Let $s$ be the side length.\n                *   Distance between adjacent midpoints is $s$.\n                *   So the side length of the triangle formed by the midpoints is $s$.\n                *   Wait, is the triangle formed by the midpoints equilateral?\n                    *  "
+    },
+    {
+      "id": "math500_headroom_06",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " 27m^3$.\n    *   So $27m^3 = 3k \\implies k = 9m^3$.\n    *   Here $k$ must be an integer. Since $m$ is an integer, $k$ is an integer.\n    *   Also, we need $k$ to be a positive integer.\n    *   So $m$ must be a positive integer (since $n$ is positive and $n^3$ is perfect cube).\n    *   Wait, is there"
+    },
+    {
+      "id": "math500_headroom_07",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "s check the vector $\\langle 2, 3, 0 \\rangle$?\n        *   Let's go back to the equations.\n        *   $6x = -y \\implies y = -6x$.\n        *   $-y = -4z \\implies y = 4z$.\n        *   So $-6x = 4z \\implies -3x = 2z$.\n        *   Let's find the direction vector.\n        *   Let $x=1$. Then $y=-6$. $z ="
+    },
+    {
+      "id": "math500_headroom_08",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " = 9$.\n            *   $36 + 81 = 117$.\n            *   $117 = 9 \\times 13$.\n            *   $\\sqrt{117} = 3\\sqrt{13}$.\n        *   Maybe the question is asking for the distance in *units*?\n        *   Maybe the \"units\" part is just a label.\n        *   Wait, could the coordinates be $(2, -6)$ and $"
+    },
+    {
+      "id": "math500_headroom_09",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " 121.\nSo the user is asking: \"How many values can be obtained from the expression $2 \\cdot 3 \\cdot 4 \\cdot 5 + 1$ by inserting parentheses?\"\nWait, but if the original expression is $2 \\cdot 3 \\cdot 4 \\cdot 5 + 1$, and the value is 121.\nWait, but the user's example is 144.\nWait, maybe the user made a"
+    },
+    {
+      "id": "math500_headroom_10",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "e divisible by 3.\n        So the sum of digits of $N$ must be divisible by 3.\n        Wait, I am just checking the condition $N$ is a multiple of 30.\n        Let's check the multiples of 30 again.\n        Multiples of 30: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450, 480, 5"
+    },
+    {
+      "id": "math500_headroom_11",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "o, the problem says \"Let $p(x)$ be a polynomial of degree 5 such that $p(n) = \\frac{n}{n^2 - 1}$\".\nThis suggests that $p(x)$ is defined on the integers $2, 3, \\dots, 7$.\nBut $p(x)$ is a polynomial.\nThis implies that $p(x)$ is a polynomial in $x$.\nIf $p(n)$ is a polynomial in $n$, then $p(n)$ must be"
+    },
+    {
+      "id": "math500_headroom_12",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " 284 = 504 - 284 = 220$.\n   This seems correct.\n   Then $P(220) = 284$.\n   Wait, is 284 a proper divisor of 284?\n   Proper divisors of 284 are $d$ such that $1 \\le d < 284$.\n   Divisors of 284: 1, 2, 4, 55, 71, 142, 284.\n   Wait, 284 is a multiple of 4? No, 284 is divisible by 4.\n   $284 / 4 = 71$.\n"
+    },
+    {
+      "id": "math500_headroom_13",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "\n                    *   This implies the cylinder has a radius of 3?\n                    *   Wait, the coordinates in the diagram are:\n                        *   $(1,0)$ and $(3.4, 0)$.\n                        *   The segment length is $2.4$.\n                        *   Wait, maybe the coordinates"
+    },
+    {
+      "id": "math500_headroom_14",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "g of the diagram is wrong.\n    *   Let's look at the diagram description again.\n    *   The diagram shows a triangle $DEF$ with vertices $D, E, F$.\n    *   The label \"7\" is placed at the midpoint of $DE$.\n    *   This implies that the length of the segment $DE$ is 7.\n    *   If the length of $DE$ is"
+    },
+    {
+      "id": "math500_headroom_15",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "it, $-(3 + 3\\sqrt{2}) = -3 - 3\\sqrt{2}$.\nSo $-(-3\\sqrt{2}) = 3\\sqrt{2}$. No.\n$-(3 + 3\\sqrt{2}) = -3 - 3\\sqrt{2}$.\n$-(-3) = 3$.\nSum is $-3 - 3\\sqrt{2} + 3 = -3\\sqrt{2}$.\nSo $z - c = \\sqrt{2} - 3\\sqrt{2}i$.\nWait, $3 - 3\\sqrt{2}$.\nLet's check the sign of $3 - 3\\sqrt{2}$.\n$\\sqrt{2} \\approx 1.414$.\n$3 - "
+    },
+    {
+      "id": "math500_headroom_16",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "check the sequence again.\n    $1-2+3-4+5-6+\\dots+99-100$.\n    Wait, let's check the signs again.\n    $1$ (pos)\n    $-2$ (neg)\n    $3$ (pos)\n    $-4$ (neg)\n    ...\n    $99$ (pos)\n    $-100$ (neg)\n    Wait, the user wrote $+5$.\n\n    Let's look at the sequence again.\n    $1-2+3-4+5-\\dots$\n    Wait, let"
+    },
+    {
+      "id": "math500_headroom_17",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "$-axis: $1, 2, 3$.\n$x$-axis: $0, 1, 2, 3$.\nWait, the labels are placed at the intersections of the axes with the grid lines.\nWait, looking at the diagram, the labels are placed at the points $(0,1), (0,2), (0,3)$.\n\nLet's assume the labels are at the top of the graph.\nThe labels are:\n$y$-axis: $1, 2,"
+    },
+    {
+      "id": "math500_headroom_18",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "3)$ to $(4,0)$ is drawn.\n            *   This looks like a triangle $ABC$ with vertices $(2,3)$, $(4,0)$, $(8,0)$.\n            *   But $C$ is at $(8,0)$.\n            *   Let's check the lengths.\n                *   $AB = \\sqrt{(4-2)^2 + (0-3)^2} = \\sqrt{4+9} = \\sqrt{13}$.\n                *   $BC = 8"
+    },
+    {
+      "id": "math500_headroom_19",
+      "type": "math_headroom",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "lta = b^2 c^2 - 4ac^3 - 4b^3 d - 27 d^2 + 18abcd$.\nHere $a=1, b=a, c=a, d=1$.\nSo $\\Delta = a^2 a^2 - 4 a^3 - 4 a^3 - 27(1)^2 + 18(1)(a)(a)$.\nWait, $a^2 c^2 = a^2 a^2 = a^4$.\n$4ac^3 = 4(1)(a)(a^2) = 4a^3$.\n$4b^3 d = 4(a^3)(1) = 4a^3$.\nSo $\\Delta = a^4 - 4a^3 - 4a^3 - 27 + 18a^2$.\n$\\Delta = a^4 - 8a^3"
+    },
+    {
+      "id": "code_01",
+      "type": "code",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "\n    cleaned = cleaned.replace(\"-\", \"\").replace(\" \", \"\")\n    # Check if the cleaned string is a palindrome\n    return cleaned == cleaned[::-1]\n```\n\nI'm realizing I need to reconsider the approach. The current implementation might not handle all edge cases properly. Let me refine the palindrome check"
+    },
+    {
+      "id": "code_02",
+      "type": "code",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 241,
+      "has_exit": true,
+      "snippet": "== 0:\n            return 0\n        if n == 1:\n            return 1\n        memo[n] = _fib(n - 1) + _fib(n - 2)\n        return memo[n]\n\n    return [_fib(i) for i in range(1, n + 1)]\n```\n\n### Example usage\n\n```python\nprint(fibonacci(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_03",
+      "type": "code",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 379,
+      "has_exit": true,
+      "snippet": " Sort intervals by start time.\n- Iterate through overlapping intervals.\n- If an interval overlaps with the current merged range, extend the current range.\n- When an interval starts after the previous one ended, add it to `merged` and reset.\n- Append the final merged interval.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_04",
+      "type": "code",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": ".popitem(last=False)\n```\n\n**Time Complexity:**\n- `get(key)`: O(1) \u2013 constant time lookup and movement of the key.\n- `put(key, value)`: O(1) \u2013 constant time insertion and removal of the least recently used item.\n- Both operations run in O(1) time relative to the number of items in the cache, which is"
+    },
+    {
+      "id": "code_05",
+      "type": "code",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 403,
+      "has_exit": true,
+      "snippet": "racter is already present in the current window, we move the `left` pointer forward until the character is removed.\n- We keep track of the maximum window size seen so far.\n- Each character is added to the map once, making lookups O(1).\n\nYou can adapt this to any input string.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_01",
+      "type": "instruction",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "n \"receiving\". No. Wait, the constraint is \"Do not use the letter 'e' in your third bullet point\".\n    *   Wait, does \"e\" count as a letter? Yes.\n    *   I need to make sure the third bullet point does not contain the character 'e'.\n    *   Let's check the constraint again: \"Do not use the letter 'e"
+    },
+    {
+      "id": "inst_02",
+      "type": "instruction",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "or \"Hi [Name]\".\n    *   Opening: Acknowledge the invitation.\n    *   Reason: Travel commitments.\n    *   Closing: Polite thanks and offer.\n\n6.  **Final Polish:**\n    *   Make it sound natural.\n    *   Ensure the tone is respectful.\n    *   Check constraints: Short? Yes. Professional? Yes. Warm? Yes."
+    },
+    {
+      "id": "inst_03",
+      "type": "instruction",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": ". I will provide the raw JSON string within a code block or just the raw text. Usually, providing it in a code block makes it easier to verify. I will stick to a clean JSON structure.\n\n    Wait, looking at the instruction \"Output a valid JSON object\". Sometimes users prefer raw text without markdown"
+    },
+    {
+      "id": "inst_04",
+      "type": "instruction",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "on):**\n    *   *Concept:* Tides are the same for both.\n    *   *Analogy:* A seesaw or a balance.\n    *   *Draft:* The tides happen because of the Moon and the Sun.\n    *   *Refinement:* The Moon pulls water. The Sun pulls water.\n    *   *Wait, keep it simple:* The Moon and Sun pull on the Earth. The"
+    },
+    {
+      "id": "inst_05",
+      "type": "instruction",
+      "condition": "ASTRA_EDIT",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "ead** (Focus on connection).\n    *   *Option D:* **City Brew** (Simple, strong).\n    *   *Option E:* **Eco-Flow** (Focus on movement).\n\n    *   *Let's try to align with the prompt's request for \"creative names\".*\n    *   *Selection:*\n        1.  **Urban Bloom** (Focus on growth and growth).\n        "
+    }
+  ],
+  "argon_p1": [
+    {
+      "id": "math500_headroom_00",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "ink></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think>"
+    },
+    {
+      "id": "math500_headroom_01",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_02",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_03",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "ink></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think>"
+    },
+    {
+      "id": "math500_headroom_04",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "ink></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think></think>"
+    },
+    {
+      "id": "math500_headroom_05",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_06",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_07",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_08",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 1467,
+      "has_exit": true,
+      "snippet": "7}$ by finding the greatest perfect square factor.\n$$117 = 9 \\times 13$$\nSince $9$ is a perfect square ($3^2$), we can pull it out:\n$$\\sqrt{9 \\times 13} = \\sqrt{9} \\times \\sqrt{13}$$\n$$\\sqrt{9} = 3$$\n\nTherefore, the simplest radical form is:\n$$3\\sqrt{13}$$\n\n\\boxed{3\\sqrt{13}}<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "math500_headroom_09",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_10",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_11",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_12",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_13",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 395,
+      "has_exit": true,
+      "snippet": "values into the formula:**\n    $$45\\pi = \\pi (3)^2 h$$\n\n2.  **Simplify the equation:**\n    $$45\\pi = \\pi (9) h$$\n\n3.  **Divide both sides by $\\pi$:**\n    $$45 = 9h$$\n\n4.  **Solve for $h$:**\n    $$h = \\frac{45}{9}$$\n    $$h = 5$$\n\nThe height of the cylinder is 5 cm.\n\n\\boxed{5}<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "math500_headroom_14",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_15",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_16",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_17",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>"
+    },
+    {
+      "id": "math500_headroom_18",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "math500_headroom_19",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 4096,
+      "has_exit": true,
+      "snippet": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n"
+    },
+    {
+      "id": "code_01",
+      "type": "code",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "ermine if a string is a palindrome after ignoring punctuation, whitespace,\n    and case.\n\n    Args:\n        s (str): The input string to check.\n\n    Returns:\n        bool: True if the string is a palindrome, False otherwise.\n    \"\"\"\n    # Remove punctuation and convert to lowercase\n    cleaned = ''."
+    },
+    {
+      "id": "code_02",
+      "type": "code",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 155,
+      "has_exit": true,
+      "snippet": "   Space complexity: O(n)\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"n must be a non-negative integer\")\n    if n == 0:\n        return []\n    if n == 1:\n        return [0]\n\n    fib = [0, 1]\n    for _ in range(2, n):\n        fib.append(fib[-1] + fib[-2])\n    return fib\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_03",
+      "type": "code",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 347,
+      "has_exit": true,
+      "snippet": ", current_end = start, end\n\n    # Append the last merged interval\n    merged.append([current_start, current_end])\n\n    return merged\n\n\n# Example usage:\n# intervals = [[1, 3], [2, 5], [4, 7], [6, 9]]\n# result = merge_intervals(intervals)\n# print(result)  # [[1, 7], [6, 9]]\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_04",
+      "type": "code",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "y (int): Maximum number of items the cache can hold.\n        \"\"\"\n        self._capacity = capacity\n        self._cache = OrderedDict()\n\n    def _remove_duplicates(self) -> None:\n        \"\"\"Remove items that are no longer in the cache.\"\"\"\n        while self._cache:\n            item = next(iter(self._"
+    },
+    {
+      "id": "code_05",
+      "type": "code",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "s position to remove the duplicate\n        while char in window:\n            window.pop(start)\n            start += 1\n        \n        # Add the new character to the window\n        window.append(char)\n        \n        # Update the maximum length found so far\n        max_len = max(max_len, len(window"
+    },
+    {
+      "id": "inst_01",
+      "type": "instruction",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 293,
+      "has_exit": true,
+      "snippet": "es feedback loops to optimize decision-making over time.\n*   In reinforcement learning, the agent learns by interacting with an environment and receiving rewards or penalties to maximize performance, contrasting with supervised learning which uses fixed labels for prediction.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_02",
+      "type": "instruction",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 172,
+      "has_exit": true,
+      "snippet": "port and would be incredibly grateful if you could kindly cancel the registration for my attendance.\n\nThank you for considering my request, and I hope we can reconnect soon to discuss how we can make this work.\n\nBest regards,\n\n[Your Name]\n[Your Title/Role]\n[Your Phone Number]<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_03",
+      "type": "instruction",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 70,
+      "has_exit": true,
+      "snippet": "<think>\n</think>\n\n</think>\n\n```json\n{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year_published\": \"1925\",\n  \"genres\": [\"Literature\", \"Classic\"],\n  \"in_print\": true\n}\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_04",
+      "type": "instruction",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "e relative to the water.\n    *   The Earth's rotation creates the \"sunlight\" effect.\n    *   The water level changes because the Earth is rotating.\n</think>\n\nImagine the ocean as a giant, very wide, wide pool of water, like a huge bathtub. The Earth is the big floor of this pool, and the Moon is the"
+    },
+    {
+      "id": "inst_05",
+      "type": "instruction",
+      "condition": "ARGON_PHASE1",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "Green City\" -> A bit generic.\n    *   *Idea 10:* \"Brewing\" -> Too abstract.\n    *   *Idea 11:* \"Green Roast\" -> A bit informal.\n    *   *Idea 12:* \"Sustain\" -> Too generic.\n    *   *Idea 13:* \"Eco\" -> Too generic.\n    *   *Idea 14:* \"Green\" -> Too generic.\n    *   *Idea 15:* \"Sustain\" -> Too generic"
+    }
+  ],
+  "argon_p2": [
+    {
+      "id": "math500_headroom_00",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "eta \\in [0, 2\\pi)$.\n    *   For a point on the positive y-axis, $\\theta = \\pi/2$.\n    *   Wait, is it possible that $\\theta = \\frac{3\\pi}{2}$?\n    *   No, that would be in the 3rd quadrant.\n    *   Wait, is it possible that the user meant a point $(0,3)$?\n    *   Wait, I need to check if I'm missing"
+    },
+    {
+      "id": "math500_headroom_01",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "\\sum_{m=1}^\\infty \\frac{1}{m^3 (j+k)^3}$? No.\n    *   Let's try to express $\\frac{1}{(j+k)^3}$ as a sum of simpler terms.\n    *   Let's look at the identity $\\frac{1}{(j+k)^3} = \\sum_{m=1}^\\infty \\frac{1}{m^3 (j+k)^3}$? No.\n    *   Let's try to express $\\frac{1}{(j+k)^3}$ as a sum of simpler terms.\n"
+    },
+    {
+      "id": "math500_headroom_02",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "4}{-3} = 3 - \\frac{4}{3} = \\frac{5}{3}$.\n    *   $f(0) = 3 + \\frac{4}{-2} = 3 - 2 = 1$.\n    *   Sum = $2 + \\frac{5}{3} + 1 = 3 + \\frac{5}{3} = \\frac{14}{3}$.\n    *   Wait, is there a typo in my reading of the problem?\n    *   \"If $f(x) = \\frac{3x-2}{x-2}$...\"\n    *   Is it possible the user meant $f"
+    },
+    {
+      "id": "math500_headroom_03",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": " I am listing the pairs $(a, b)$ in the list above.\n    Let's check the list again.\n    (0,0) -> 1\n    (0,1) -> 7\n    (0,2) -> 49\n    (1,0) -> 2\n    (1,1) -> 14\n    (1,2) -> 28\n    (2,0) -> 4\n    (2,1) -> 14\n    (2,2) -> 49\n    Wait, (1,1) gives 14. (2,1) gives 14.\n    Is 14 repeated?\n    Yes, 14 is"
+    },
+    {
+      "id": "math500_headroom_04",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "e code `draw((-0.5,0)--(8,0))` draws a horizontal line from $(-0.5,0)$ to $(8,0)`.\n            *   Wait, the code `draw((0,-0.5)--(0,6))` draws a vertical line from $(0,-0.5)$ to $(0,6)`.\n            *   Wait, the code `draw((i,0)--(i,6))` draws a vertical line from $(i,0)$ to $(i,6)`.\n            *"
+    },
+    {
+      "id": "math500_headroom_05",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "e hexagon is $s_{large} = 2a$.\n    *   Wait, the side length of the small triangles is $a$.\n    *   So the perimeter of the hexagon is $6 \\times s_{large} = 6 \\times (2a) = 12a$.\n    *   The perimeter of the triangle is $a$.\n    *   Wait, if the hexagon is the union of these triangles, the triangles"
+    },
+    {
+      "id": "math500_headroom_06",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "=1$.\n    *   $1 = 3k + 3$.\n    *   $3k = -2$. No integer solution.\n    *   $n=2$. $n^3=8$.\n    *   $8 = 3k + 3$.\n    *   $3k = 5$. No integer solution.\n    *   $n=3$. $n^3=27$.\n    *   $27 = 3k + 3$.\n    *   $3k = 24$.\n    *   $k = 8$.\n    *   So $n=3$ works.\n    *   Wait, $n^3$ is the number.\n    *"
+    },
+    {
+      "id": "math500_headroom_07",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "ND $-z = 3y$.\n    *   Wait, $2x = 3y$ AND $-z = 2x$.\n    *   Wait, $2x = 3y$ AND $-z = 3y$.\n    *   Wait, $2x = 3y$ AND $-z = 2x$.\n    *   Wait, $2x = 3y$ AND $-z = 3y$.\n    *   Wait, $2x = 3y$ AND $-z = 2x$.\n    *   Wait, $2x = 3y$ AND $-z = 3y$.\n    *   Wait, $2x = 3y$ AND $-z = 2x$.\n    *   Wait,"
+    },
+    {
+      "id": "math500_headroom_08",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\n    3. $x_2-x_1 = -4-2 = -6$. Square is 36.\n    4. $y_2-y_1 = 3-(-6) = 9$. Square is 81.\n    5. $d = \\sqrt{36+81} = \\sqrt{117}$.\n    6. Simplify: $\\sqrt{9 \\cdot 13} = 3\\sqrt{13}$.\n    7. Boxed answer.\n\n    Wait, is there any interpretation where \"units\" means \"units"
+    },
+    {
+      "id": "math500_headroom_09",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "t 4 \\cdot 5 + 1$.\n    *   Wait, I think the prompt is actually asking about the expression $2 \\cdot 3 \\cdot 4 \\cdot 5 + 1$.\n    *   Wait, I think I need to check the prompt again.\n    *   \"The expression $2\\cdot 3 \\cdot 4\\cdot 5+1$ is equal to 121, since multiplication is carried out before addition"
+    },
+    {
+      "id": "math500_headroom_10",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
+    },
+    {
+      "id": "math500_headroom_11",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "rect.\nSo $p(n) = \\frac{1}{2} \\left( \\frac{1}{n-1} + \\frac{1}{n+1} \\right)$.\n\nLet's re-verify the values.\n$p(2) = \\frac{1}{2(1)} + \\frac{1}{2(3)} = \\frac{1}{2} + \\frac{1}{6} = \\frac{3}{6} + \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3}$.\n$p(3) = \\frac{1}{2(2)} + \\frac{1}{2(4)} = \\frac{1}{4} + \\frac{1}{8} ="
+    },
+    {
+      "id": "math500_headroom_12",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "7 \\times 10 + 1$.\nWait, $71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\nWait, $71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\nWait, $71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n$71 = 7 \\times 10 + 1$.\n"
+    },
+    {
+      "id": "math500_headroom_13",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "$.\n    $1.2 + 105 = 106.2$.\n    $1.2 + 106 = 107.2$.\n    $1.2 + 107 = 108.2$.\n    $1.2 + 108 = 109.2$.\n    $1.2 + 109 = 110.2$.\n    $1.2 + 110 = 111.2$.\n    $1.2 + 111 = 112.2$.\n    $1.2 + 112 = 113.2$.\n    $1.2 + 113 = 114.2$.\n    $1.2 + 114 = 115.2$.\n    $1.2 + 115 = 116.2$.\n    $1.2 + 116 = 117.2"
+    },
+    {
+      "id": "math500_headroom_14",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "abel \"$7$\" is placed at the midpoint of $E+F$.\n        *   Wait, is it possible that the triangle is $DEF$ and $F$ is the right angle?\n        *   Wait, if $F$ is the right angle, then $DE^2 = DF^2 + EF^2$.\n        *   $DE = \\sqrt{51}$. $EF = 7$. $DF = \\sqrt{51}$.\n        *   $51 = 51 + 49$.\n       "
+    },
+    {
+      "id": "math500_headroom_15",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "qrt{2}) \\cdot i$\n        $= \\sqrt{2} + (-3\\sqrt{2}) \\cdot i^2$\n        $= \\sqrt{2} + (-3\\sqrt{2})(-1)$\n        $= \\sqrt{2} + 3\\sqrt{2}$\n        $= 4\\sqrt{2}$.\n        Wait, I think I made a mistake.\n        $i \\cdot i = -1$.\n        So $i \\cdot (-3\\sqrt{2}) \\cdot i = -3\\sqrt{2} \\cdot i^2 = -3\\sqrt{2"
+    },
+    {
+      "id": "math500_headroom_16",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "-100$.\n    Wait, the pattern is $1-2+3-4+5-\\dots+99-100$.\n    Wait, if the pattern is $1-2+3-4+5-\\dots$, the last term is $99-100$.\n    Wait, the pattern is $1-2+3-4+5-\\dots+99-100$.\n    Wait, if the pattern is $1-2+3-4+5-\\dots$, the last term is $99-100$.\n    Wait, the pattern is $1-2+3-4+5-\\dots+9"
+    },
+    {
+      "id": "math500_headroom_17",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "  *   Wait, looking at the graph, the labels are $1, 2, 3, -1, -2, -3$.\n        *   Wait, looking at the graph, the labels are $1, 2, 3, -1, -2, -3$.\n        *   Wait, looking at the graph, the labels are $1, 2, 3, -1, -2, -3$.\n        *   Wait, looking at the graph, the labels are $1, 2, 3, -1, -2,"
+    },
+    {
+      "id": "math500_headroom_18",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "(4.5,3),S);` is at B.\n    *   Wait, looking at the diagram code again: `label(\"$124^{\\circ}$\",(2,3),SW);` is at A.\n    *   Wait, looking at the diagram code again: `label(\"$x^{\\circ}$\",(4.5,3),S);` is at B.\n    *   Wait, looking at the diagram code again: `label(\"$124^{\\circ}$\",(2,3),SW);` is at A.\n"
+    },
+    {
+      "id": "math500_headroom_19",
+      "type": "math_headroom",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 4096,
+      "has_exit": false,
+      "snippet": "q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - 4q^3 - "
+    },
+    {
+      "id": "code_01",
+      "type": "code",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 394,
+      "has_exit": true,
+      "snippet": "print(is_palindrome(\"\"))                                # True\nprint(is_palindrome(\"a man a plan a canal a Panama\"))  # False\n```\n\nThis function returns `True` if the input string is a palindrome after removing punctuation, whitespace, and case, and returns `False` otherwise.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_02",
+      "type": "code",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 342,
+      "has_exit": true,
+      "snippet": " _fib(i - 1) + _fib(i - 2)\n        return memo[i]\n    \n    # Compute first n Fibonacci numbers\n    result = []\n    for i in range(1, n + 1):\n        result.append(_fib(i))\n    \n    return result\n\n\n# Example usage:\n# print(fibonacci(10))\n# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_03",
+      "type": "code",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 375,
+      "has_exit": true,
+      "snippet": "last merged interval\n    if current_start != current_end:\n        merged.append((current_start, current_end))\n\n    return merged\n```\n\nExample usage:\n\n```python\nintervals = [\n    [1, 3],\n    [2, 4],\n    [5, 7]\n]\nresult = merge_intervals(intervals)\nprint(result)  # [[1, 7]]\n```<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "code_04",
+      "type": "code",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "emove_item(key)\n        return self._cache[0][1] if self._cache else None\n\n    def put(self, key: str, value: int) -> None:\n        \"\"\"\n        Insert a key-value pair into the cache.\n        \n        Args:\n            key (str): The key to store.\n            value (int): The value to store.\n       "
+    },
+    {
+      "id": "code_05",
+      "type": "code",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 421,
+      "has_exit": true,
+      "snippet": "t - left + 1)\n            left = last_seen[char] + 1\n        else:\n            last_seen[char] = right\n            max_len = max(max_len, right - left + 1)\n\n    return max_len\n```\n\nBoth implementations run in O(n) time and O(1) extra space (excluding the input string itself).<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_01",
+      "type": "instruction",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": " 'e' in its third bullet point. Wait, the instruction is \"in your third bullet point\". So I need to write the third bullet point without the letter 'e'.\n\n    *Wait, I need to check if the letter 'e' is case-sensitive.* Usually, it means the character 'e' (lowercase). But I should avoid it completely"
+    },
+    {
+      "id": "inst_02",
+      "type": "instruction",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": " good week.\n    *   I'm writing to let you know that I cannot attend the conference due to my travel schedule.\n    *   I am flexible to accept if you have other options.\n    *   Thank you for your time.\n    *   Best, [Name].\n    *   *Critique:* Better, but needs to sound warmer and more professional"
+    },
+    {
+      "id": "inst_03",
+      "type": "instruction",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 512,
+      "has_exit": true,
+      "snippet": "ouble-check the keys. `title`, `author`, `year_published`, `genres`, `in_print`. All present.\n\n    Let's generate the response.\n\n    ```json\n    {\n      \"title\": \"The Great Gatsby\",\n      \"author\": \"F. Scott Fitzgerald\",\n      \"year_published\": 1925,\n      \"genres\": [\"Fiction\", \"Classic\"],\n      \"in"
+    },
+    {
+      "id": "inst_04",
+      "type": "instruction",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 177,
+      "has_exit": true,
+      "snippet": "p and down, and two smaller waves called low tides that stay flat in the middle.\n\nIn short, the tides are like the water in a bathtub getting pushed up and down by the Earth's spinning and the Moon's spinning, creating a rhythmic wave that moves across the entire ocean floor.<|im_end|>\n<|endoftext|>"
+    },
+    {
+      "id": "inst_05",
+      "type": "instruction",
+      "condition": "ARGON_PHASE2",
+      "gen_tokens": 252,
+      "has_exit": true,
+      "snippet": " symbolizing a dual-source sustainable philosophy.\n\n5. **Silent Bloom**\n   *Rationale:* The name captures the essence of a sustainable coffee shop as a quiet, resilient flower that thrives despite the surrounding chaos, emphasizing mindfulness and peace in a busy environment.<|im_end|>\n<|endoftext|>"
+    }
+  ]
+}
