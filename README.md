@@ -1,6 +1,6 @@
 # Weight-Space Programming with Gemini 4 Argon on Qwen3.5-0.8B
 
-Last updated: 2026-11-04
+Last updated: 2026-11-05
 
 **Status: preliminary. The results below do not show that any edit improves math accuracy.** An earlier version of this README reported an "82.0% clean thinking exit rate" and described the protocol as blind and zero-nudge. Both claims were wrong. See [Corrections](#corrections-2026-11-04).
 
@@ -45,10 +45,13 @@ This run did not score answers.
 ## Limitations (LIMITATION)
 
 1. **The benchmarked Phase 1 patch is not the edit Argon tested.** Argon's last tested edit is `probes/turn11_argon.py`, run on 4 practice problems. The benchmarked `apply_argon_patch.py` first appears after that session. It uses different edit formulas, a different neuron ranking, and a different token list that adds "But", "Let" and "Actually".
-2. **The protocol was not fully blind or unassisted.**
-   - The Phase 1 task prompt and Argon's raw transcripts are not in this repo.
-   - A separate assistant agent copied Argon's scripts to the GPU machine and returned the outputs.
-   - The Phase 2 prompt is the original authors' prompt, which mentions repetition.
+2. **The protocol was not blind.** The raw transcripts are in `transcripts/`. They show:
+   - **Each turn was a separate Argon session.** A parent agent (`gemini-3.8-flash`, in an OpenCode `build` session) wrote a new prompt every turn and ran Argon's code on the GPU machine.
+   - **The parent rewrote the history.** It replaced Argon's earlier turns with one-line summaries and paraphrased the environment outputs.
+   - **The loop diagnosis came from the parent.** In Phase 1 Turn 2, Argon guessed the problem was verbosity (`transcripts/phase1/turn02.md`). The Turn 3 prompt then stated, inside a block labelled "Environment Output", that the model "NEVER exits the `<think>` mode" and is "trapped in infinite self-verification / re-derivation loops" (`transcripts/phase1/turn03.md`).
+   - **The parent had read the original blog and logs** before Phase 1 Turn 1. Evidence: the parent session's fetch history in the local OpenCode database; not published.
+   - **Pass counts shown to Argon were wrong.** The Turn 3 and Turn 4 prompts both report "24 / 25" remaining.
+   - **The Phase 2 prompt is the original authors' prompt,** which mentions repetition.
 3. **The forward-pass budget was not enforced across turns.** Each turn script creates a new sandbox, and Phase 2 scripts call `model.generate` directly. The reported pass counts ("8 of 25", "48 of 50") are not verified.
 4. **Phase 2 tuning used benchmark problems.** `probes/phase2/phase2_turn7_argon.py` and `phase2_turn10_argon.py` use GSM8K test items 1–3, which are in the 100-problem benchmark.
 5. **Astra was run at 1,024 and 4,096 new tokens.** The original authors evaluated with up to 32,768. These numbers do not test their claim.
@@ -76,6 +79,7 @@ Because of tying (limitation 6), the `lm_head` rows are also input embedding row
 - `benchmark_eval.py`, `run_three_way_benchmark.py`, `run_phase2_benchmark.py`, `run_expanded_and_domain_eval.py`: evaluation scripts. The last two commit and push results with git, then power off the machine they run on; remove those lines before running elsewhere.
 - `*.json`, `*.jsonl`: saved results.
 - `rescore.py`, `rescore_summary.json`: accuracy and exit-type rescoring.
+- `transcripts/phase1/`, `transcripts/phase2/`: every prompt sent to Argon and every Argon response, one file per turn. Exported unedited from the local OpenCode database on 2026-11-05. The only change is one home-directory path replaced with `/home/<user>`.
 - `argon_process_log.md`, `phase2_argon_process_log.md`: summaries of the Argon sessions, written afterwards; not raw transcripts.
 
 ## Corrections (2026-11-04)
@@ -85,6 +89,7 @@ Because of tying (limitation 6), the `lm_head` rows are also input embedding row
 - **"Solved in 8 forward passes" is withdrawn.** It was not verified (limitation 3), and no edit has been shown to solve the task.
 - **The claim that Phase 2 was "underway" was out of date.** Its results are above.
 - **"First independent replication" is withdrawn.** It was not checked.
+- **2026-11-05: "Argon diagnosed the failure" is withdrawn.** The diagnosis was given to Argon by a parent agent that had read the original blog. See limitation 2 and `transcripts/`.
 
 ## License
 
