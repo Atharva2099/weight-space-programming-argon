@@ -1,112 +1,91 @@
-# Weight-Space Programming with Gemini 4 Argon: Unguided Qwen3.5-0.8B Loop Repair
+# Weight-Space Programming with Gemini 4 Argon on Qwen3.5-0.8B
 
-Independent replication and mechanistic analysis of Experiment 8 from MIT CSAIL's *"Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights"* (Takehi et al., Nov 2026), evaluated with **Google Gemini 4 Argon** under a strictly blind, zero-nudge protocol.
+Last updated: 2026-11-04
 
----
+**Status: preliminary. The results below do not show that any edit improves math accuracy.** An earlier version of this README reported an "82.0% clean thinking exit rate" and described the protocol as blind and zero-nudge. Both claims were wrong. See [Corrections](#corrections-2026-11-04).
 
-## 1. Executive Summary
+This repo is an attempt to replicate Experiment 8 from Takehi et al. (Nov 2026), *"Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights"*, using Gemini 4 Argon (`google-vertex/gemini-4-argon`) instead of GPT-6 Astra. Argon was given the weights of `Qwen/Qwen3.5-0.8B`, a Python sandbox, and a forward-pass budget, and was asked to edit the weights to improve math without gradients.
 
-In November 2026, researchers at MIT CSAIL demonstrated that OpenAI's GPT-6 Astra could edit 0.016% of `Qwen3.5-0.8B` weights to suppress degenerative reasoning loops on math problems without gradients or training.
+- Original blog: https://rikiyat.github.io/blog/weight-space-programming/
+- Original logs: https://github.com/RikiyaT/lm_understand-logs
+- Astra checkpoint: https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming
 
-We performed the first independent cross-model replication using **Gemini 4 Argon** (`google-vertex/gemini-4-argon`). Operating with zero web access, zero knowledge of the blog's solution, and zero human guidance, Argon:
-1. Diagnosed that early/middle reasoning is mathematically sound, but late layers inject a massive +23.1 logit surge toward loop-trigger tokens (`"Wait"`, `"Alternatively"`).
-2. Built a **Logit Lens** across all 24 layers to pinpoint the exact layer where the loop attractor takes over (Layer 22).
-3. Developed a **State-Conditional Bridge** that couples the residual hesitation subspace into `</think>` using **Gram-Schmidt orthogonalization**.
-4. Modified **410,624 weights** (0.054% of the model) across Layers 18–23 MLPs and `lm_head`, lifting thinking completion from **1.0% to 82.0%** across 100 official benchmark problems.
+## Conditions
 
----
-
-## 2. Benchmark Results (100 Official Problems)
-
-Evaluated across **100 official competition problems** (50 from `HuggingFaceH4/MATH-500` and 50 from `openai/gsm8k`) under standard generation limits (`max_new_tokens=1024`, `temp=0.6`, `top_p=0.95`, `top_k=20`):
-
-| Model Condition | Total Exit Rate (100 Problems) | MATH-500 Exit Rate (50 Problems) | GSM8K Exit Rate (50 Problems) |
-|---|---|---|---|
-| **Base Model (`Qwen3.5-0.8B`)** | **1.0%** (1 / 100) | **0.0%** (0 / 50) | **2.0%** (1 / 50) |
-| **GPT-6 Astra Edit (MIT CSAIL)** | **5.0%** (5 / 100) | **0.0%** (0 / 50) | **10.0%** (5 / 50) |
-| **Gemini 4 Argon Edit (This Work)** | **82.0%** (82 / 100) | **78.0%** (39 / 50) | **86.0%** (43 / 50) |
-
-### Key Findings
-- **Base Model**: Completely paralyzed by self-doubt loops on 99 out of 100 problems.
-- **GPT-6 Astra Edit**: Under standard 1k-token budgets, Astra's Layer 15/19 column cuts still produce rambling multi-thousand-token traces (MIT CSAIL evaluated Astra with up to 32,768 tokens).
-- **Gemini 4 Argon Edit**: Gating the output boundary via the State-Conditional Bridge achieved **82.0% clean thinking exits** within standard token limits (78% on MATH-500 and 86% on GSM8K).
-
----
-
-## 3. Parameter Arithmetic (What Changed)
-
-| Layer / Component | Dimensions | Columns / Rows Edited | Weights Modified |
-|---|---|---|---|
-| **Layers 18–23 `mlp.down_proj`** | `[1024, 3584]` (×6 layers) | Top 64 hesitation neurons | 393,216 |
-| **`lm_head.weight` (`</think>`)** | `[248320, 1024]` | Row 248069 scaled + bridged | 1,024 |
-| **`lm_head.weight` (Hesitation)** | `[248320, 1024]` | 16 loop-starter rows dampened | 16,384 |
-| **Total Modified** | — | — | **410,624 weights (0.054%)** |
-
----
-
-## 4. Methodology & Protocol Comparison
-
-| Dimension | MIT CSAIL Study (GPT-6 Astra) | Our Replication (Gemini 4 Argon) |
+| Condition | What was edited | Code |
 |---|---|---|
-| **Model Evaluated** | OpenAI GPT-6 Astra | Google Gemini 4 Argon |
-| **Human Nudges / Notes** | Experimenters sent human notes during runs (`notices/` folder with notes 001 and 002). | **Zero human notes**: 100% blind and unguided. |
-| **Prompt Hints** | Task prompt hinted: *"for example, if the model often fails because it repeats itself..."* | **Zero hints**: Model had to discover the looping bug cold. |
-| **Allowed Tensors / Scope** | Forbidden from touching `lm_head`, `embed_tokens`, or `norm`. | **Full weight space permitted**: Diagnosed `lm_head` norm deficit and built output bridge. *(Follow-up constrained run currently underway).* |
-| **Forward Pass Budget** | 50 forward passes (`p50c`). | Solved in **8 forward passes** (17 passes saved). |
+| Base | Nothing | - |
+| Astra | Authors' published checkpoint | - |
+| Argon Phase 1 (unconstrained) | Layers 18–23 MLP `down_proj` plus `lm_head` rows | `apply_argon_patch.py` |
+| Argon Phase 2 (constrained, authors' scope rules) | Layers 16–23 MLP `down_proj` plus layer 23 attention `o_proj` | `apply_constrained_argon_patch.py` |
 
----
+## Results: 100 problems, 1,024 new tokens (FACT)
 
-## 5. Scope Clarification: Unconstrained vs. Constrained Protocols
+Setup: first 50 test problems of `HuggingFaceH4/MATH-500` and first 50 test problems of `openai/gsm8k`. One sample per problem, sampling at temperature 0.6, top_p 0.95, top_k 20, no fixed seed. Sources: `benchmark_results_3way.jsonl` and `phase2_benchmark_results.jsonl`, scored by `rescore.py` (output in `rescore_summary.json`).
 
-- **In This Release (Phase 1)**: Gemini 4 Argon operated in an unconstrained weight-space regime. Having access to `lm_head.weight`, it diagnosed that `</think>` suffers from an under-trained embedding norm deficit (~0.88 vs ~1.40 for standard discourse markers) and constructed a **State-Conditional Bridge** linking post-solution hesitation directly into `lm_head[think_end_id]`. This achieved an **82.0% exit rate under standard 1,024-token budgets**.
-- **MIT CSAIL Astra Constraints**: In the original study, the authors ruled `lm_head.weight`, `embed_tokens.weight`, and `norm.weight` out of scope, forcing Astra to isolate an internal-only circuit cut (Layers 15 & 19 MLPs), which required up to 32,768 tokens to conclude.
-- **Phase 2 (Underway)**: We are currently executing a strictly constrained run where Argon is forbidden from touching `lm_head` or `norm`, evaluating whether it can discover an internal-only circuit cut matching Astra's constraints.
+| Condition | Correct | Never closed thinking | Clean close | Close + extra `</think>`, answer given | Close + repeated `</think>`, no answer |
+|---|---|---|---|---|---|
+| Base | 0 | 99 | 1 | 0 | 0 |
+| Astra | 0 | 95 | 5 | 0 | 0 |
+| Argon Phase 2 | 0 | 97 | 3 | 0 | 0 |
+| Argon Phase 1 | 8 (MATH 1, GSM8K 7) | 18 | 17 | 14 | 51 |
 
----
+How it was scored:
+- **Correct:** the extracted answer after `</think>` equals the reference answer. Runs that never close thinking get no answer, so they always score 0.
+- **Exit type:** judged from the first 180 characters after the first `</think>`, the only part that was saved.
 
-## 6. Quickstart: Apply the Patch
+## Results: 20 MATH-500 problems, 4,096 new tokens (FACT)
 
-Clone the repository and apply the surgical patch directly to `Qwen/Qwen3.5-0.8B`:
+Source: `expanded_domain_eval.jsonl`.
+- **Base, Astra and Argon Phase 2:** 0/20 closed thinking.
+- **Argon Phase 1:** 20/20 emitted `</think>`, but 18/20 ended with `</think>` repeated until the 4,096-token cap.
 
-```python
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from apply_argon_patch import apply_think_exit_weight_patch
+This run did not score answers.
 
-model_id = "Qwen/Qwen3.5-0.8B"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    torch_dtype=torch.bfloat16,
-    device_map="cuda",
-)
+## Limitations (LIMITATION)
 
-# Apply Argon's zero-gradient weight patch in-place
-patch_info = apply_think_exit_weight_patch(model, tokenizer)
-print("Patch successfully applied:", patch_info)
+1. **The benchmarked Phase 1 patch is not the edit Argon tested.** Argon's last tested edit is `probes/turn11_argon.py`, run on 4 practice problems. The benchmarked `apply_argon_patch.py` first appears after that session. It uses different edit formulas, a different neuron ranking, and a different token list that adds "But", "Let" and "Actually".
+2. **The protocol was not fully blind or unassisted.**
+   - The Phase 1 task prompt and Argon's raw transcripts are not in this repo.
+   - A separate assistant agent copied Argon's scripts to the GPU machine and returned the outputs.
+   - The Phase 2 prompt is the original authors' prompt, which mentions repetition.
+3. **The forward-pass budget was not enforced across turns.** Each turn script creates a new sandbox, and Phase 2 scripts call `model.generate` directly. The reported pass counts ("8 of 25", "48 of 50") are not verified.
+4. **Phase 2 tuning used benchmark problems.** `probes/phase2/phase2_turn7_argon.py` and `phase2_turn10_argon.py` use GSM8K test items 1–3, which are in the 100-problem benchmark.
+5. **Astra was run at 1,024 and 4,096 new tokens.** The original authors evaluated with up to 32,768. These numbers do not test their claim.
+6. **`lm_head` is tied to the input embeddings in this model.** The Phase 1 row edits also change how the model reads "Wait", "But", "Let", `</think>` and the other listed tokens.
+   - HYPOTHESIS: this may relate to the repeated `</think>` output.
+7. **Small, single-sample evaluation.** No differences above have been tested statistically.
+8. **Full generations were not saved.** Answers reached inside the thinking text cannot be scored.
 
-# Run standard inference (thinking enabled)
-prompt = "Find all real solutions x to: sqrt(x + 3) + sqrt(x - 2) = 5."
-formatted = f"<|im_start|>user\n{prompt}\nShow step-by-step reasoning.<|im_end|>\n<|im_start|>assistant\n<think>\n"
-inputs = tokenizer(formatted, return_tensors="pt").to("cuda")
+## What changed (Phase 1 patch, `apply_argon_patch.py`)
 
-out = model.generate(**inputs, max_new_tokens=1024, temperature=0.6, top_p=0.95, top_k=20)
-print(tokenizer.decode(out[0, inputs.input_ids.shape[1]:], skip_special_tokens=True))
-```
+| Component | Edited | Weights |
+|---|---|---|
+| Layers 18–23 `mlp.down_proj` | 64 columns per layer | 393,216 |
+| `lm_head` row for `</think>` | 1 row rewritten | 1,024 |
+| `lm_head` rows for listed hesitation tokens | Up to 16 single-token rows scaled by 0.8 | up to 16,384 |
 
----
+Because of tying (limitation 6), the `lm_head` rows are also input embedding rows.
 
-## 6. Repository Layout
+## Repository layout
 
-- `apply_argon_patch.py`: Self-contained production weight patch function.
-- `argon_process_log.md`: Complete 12-turn research log capturing Argon's unguided thoughts, equations, and PyTorch probes.
-- `benchmark_eval.py`: Standalone 10-problem validation script.
-- `benchmark_results_3way.json`: Full 82 KB evaluation results comparing Base vs. Astra vs. Argon across 100 problems.
-- `benchmark_results_3way.jsonl`: 300-row line-by-line evaluation stream.
-- `probes/`: Chronological probe and intervention scripts (`turn1` through `turn11`).
+- `chunk2_harness.py`: the sandbox (practice problems, forward-pass counter, weight access).
+- `chunk1_baseline_loop.py`: single baseline generation.
+- `probes/`: the turn-by-turn scripts from the Argon sessions (`probes/phase2/` for Phase 2). Run from the repo root, e.g. `PYTHONPATH=. python probes/turn1_argon.py`.
+- `apply_argon_patch.py`, `apply_constrained_argon_patch.py`: the patches used in the benchmarks.
+- `benchmark_eval.py`, `run_three_way_benchmark.py`, `run_phase2_benchmark.py`, `run_expanded_and_domain_eval.py`: evaluation scripts. The last two commit and push results with git, then power off the machine they run on; remove those lines before running elsewhere.
+- `*.json`, `*.jsonl`: saved results.
+- `rescore.py`, `rescore_summary.json`: accuracy and exit-type rescoring.
+- `argon_process_log.md`, `phase2_argon_process_log.md`: summaries of the Argon sessions, written afterwards; not raw transcripts.
 
----
+## Corrections (2026-11-04)
+
+- **"82.0% clean thinking exits" was wrong.** 82/100 runs contained `</think>`, but only 17 closed cleanly. See the table above.
+- **"Zero human guidance" / "zero hints" / "100% blind" are withdrawn.** See limitation 2.
+- **"Solved in 8 forward passes" is withdrawn.** It was not verified (limitation 3), and no edit has been shown to solve the task.
+- **The claim that Phase 2 was "underway" was out of date.** Its results are above.
+- **"First independent replication" is withdrawn.** It was not checked.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License. See [LICENSE](LICENSE).

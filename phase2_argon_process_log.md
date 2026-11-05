@@ -2,6 +2,14 @@
 
 Last updated: 2026-11-04
 
+> **Corrections (2026-11-04).** This log is a summary written after the session. It is not a raw transcript. Known problems:
+> - The task prompt below mentions repetition and early closing, so this run was not blind to the failure type.
+> - Turn sections are out of order. Turn 4, 5, 6 and 9 sections are missing. The Turn 3 section shows Turn 5 output.
+> - "48 out of 50" forward passes is not verified. Turn scripts call `model.generate` directly or keep their own counter.
+> - Turns 7 and 10 use GSM8K test items 1–3, which are in the 100-problem benchmark.
+> - Turn 7 output reports "Exited 3/6, Solved 4/6". The definition of "solved" is not recorded.
+> - The final patch (Turn 11) has no evaluation script in this repo. On the 100-problem benchmark it closed thinking on 3/100 and answered 0/100 correctly (`rescore.py`).
+
 This document records the exact, unguided reasoning process of **Gemini 4 Argon** (`google-vertex/gemini-4-argon`) diagnosing and repairing reasoning loops in `Qwen3.5-0.8B` under the **exact contest constraints** used by MIT CSAIL in Takehi et al. (Nov 2026).
 
 ---

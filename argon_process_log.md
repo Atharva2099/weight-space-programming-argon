@@ -1,6 +1,14 @@
 # Gemini 4 Argon: Unguided Weight-Space Programming Process Log
 
-Last updated: 2026-11-02
+Last updated: 2026-11-04
+
+> **Corrections (2026-11-04).** This log is a summary written after the session. It is not a raw transcript. Known problems:
+> - The "blind / zero hints" description can't be checked: the task prompt and transcripts were not saved, and an assistant agent relayed scripts and outputs.
+> - Turn 3 records the `</think>` row norm as 0.5706. Turn 12 says "~0.88 vs ~1.40". These conflict.
+> - "Complete, correct answers" (Turn 12) was not checked. Only `</think>` presence was recorded.
+> - The benchmarked patch (`apply_argon_patch.py`) differs from the Turn 11 edit.
+> - In the 4-way table, the 82.0% figure counts any `</think>`. Only 17/100 runs closed cleanly, and 8/100 were correct. See `README.md` and `rescore.py`.
+> - Astra was run at 1,024 tokens, not the authors' settings.
 
 This document records the exact, unguided reasoning process of **Gemini 4 Argon** (`google-vertex/gemini-4-argon`) diagnosing and repairing reasoning loops in `Qwen/Qwen3.5-0.8B`. 
 

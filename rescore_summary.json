@@ -1,0 +1,51 @@
+{
+  "BASE_MODEL/MATH-500": {
+    "n": 50,
+    "no_exit": 50,
+    "correct": 0
+  },
+  "BASE_MODEL/GSM8K": {
+    "n": 50,
+    "no_exit": 49,
+    "correct": 0,
+    "clean": 1
+  },
+  "ASTRA_EDIT/MATH-500": {
+    "n": 50,
+    "no_exit": 50,
+    "correct": 0
+  },
+  "ASTRA_EDIT/GSM8K": {
+    "n": 50,
+    "no_exit": 45,
+    "correct": 0,
+    "clean": 5
+  },
+  "ARGON_EDIT/MATH-500": {
+    "n": 50,
+    "clean": 6,
+    "correct": 1,
+    "loop": 26,
+    "stutter": 7,
+    "no_exit": 11
+  },
+  "ARGON_EDIT/GSM8K": {
+    "n": 50,
+    "stutter": 7,
+    "correct": 7,
+    "loop": 25,
+    "no_exit": 7,
+    "clean": 11
+  },
+  "PHASE2_CONSTRAINED/MATH-500": {
+    "n": 50,
+    "no_exit": 50,
+    "correct": 0
+  },
+  "PHASE2_CONSTRAINED/GSM8K": {
+    "n": 50,
+    "no_exit": 47,
+    "correct": 0,
+    "clean": 3
+  }
+}
