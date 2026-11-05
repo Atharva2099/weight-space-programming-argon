@@ -10,3 +10,4 @@ venv/
 # Local-only: contains infrastructure identifiers or agent instructions
 *.sh
 AGENTS.md
+notes/
